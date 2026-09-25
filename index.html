@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f8e9ed">
+  <title>Piyush & Dr. Shini — Wedding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="locked">
+
+  <!-- Opening video -->
+  <div id="intro" class="intro" aria-label="Wedding invitation opening">
+    <video id="introVideo" class="intro-video" autoplay muted playsinline preload="auto">
+      <source src="assets/gate-opening.mp4" type="video/mp4">
+    </video>
+
+    <div class="intro-fallback" aria-hidden="true">
+      <div class="envelope">
+        <div class="envelope-flap"></div>
+        <div class="wax">Tap<br>to open</div>
+      </div>
+      <button id="openInvite" class="gold-btn" type="button">Open Invitation</button>
+    </div>
+
+    <button id="skipIntro" class="skip-btn" type="button">Skip</button>
+  </div>
+
+  <button id="musicToggle" class="music-btn" type="button" aria-label="Toggle music">♫</button>
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <main id="site">
+
+    <section class="hero">
+      <div class="hero-content reveal">
+        <div class="tiny-heart" aria-hidden="true">♥</div>
+        <p class="script intro-line">
+          We are honored to welcome you to<br>
+          the Wedding ceremony of
+        </p>
+
+        <div class="ornament">— <span>♥</span> —</div>
+
+        <h1 class="names">Piyush<br><span>&amp;</span><br>Dr. Shini</h1>
+
+        <p class="details">Son of Mr. &amp; Mrs. ______<br>M.Tech, PhD<br>Software Engineer</p>
+        <p class="details">&amp;</p>
+        <p class="details">Daughter of Mr. &amp; Mrs. ______<br>B.Tech, MBA<br>________</p>
+
+        <div class="scroll-hint">SCROLL<br><span>⌄</span></div>
+      </div>
+    </section>
+
+    <section class="welcome section">
+      <div class="section-inner reveal">
+        <p class="script large">
+          We are honored to welcome you to the<br>
+          Wedding ceremony of Piyush &amp; Dr. Shini.<br>
+          As they begin their journey together in faith<br>
+          and love,<br>
+          we thank you for being part of this<br>
+          blessed occasion ❤️
+        </p>
+        <div class="ornament">— <span>♥</span> —</div>
+      </div>
+    </section>
+
+    <!-- Wedding date scratch card -->
+    <section class="scratch-section section">
+      <div class="section-inner reveal">
+        <h2 class="script heading">A Little Surprise</h2>
+        <div class="ornament">— <span>♥</span> —</div>
+
+        <div class="scratch-wrap">
+          <div class="scratch-message">
+            <div class="gift-icon">♥</div>
+            <p class="scratch-kicker">Our Wedding Day</p>
+            <h3>30 June 2026</h3>
+            <p>10:30 AM</p>
+          </div>
+          <canvas id="scratchCanvas" aria-label="Scratch to reveal the wedding date"></canvas>
+        </div>
+
+        <p class="scratch-note">Scratch with your finger to reveal our wedding date ✨</p>
+      </div>
+    </section>
+
+    <section class="gallery section">
+      <div class="section-inner reveal">
+        <div class="ornament">— <span>♥</span> —</div>
+        <div class="gallery-card">
+          <img src="assets/gallery-1.jpg" alt="Wedding flowers" onerror="this.style.display='none'">
+          <div class="gallery-placeholder">Add your wedding photo<br><small>assets/gallery-1.jpg</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown section">
+      <div class="section-inner reveal">
+        <h2 class="script heading">Counting Down to Forever</h2>
+        <div class="ornament">— <span>♥</span> —</div>
+        <div id="countdown" class="count-grid">
+          <div><strong>00</strong><span>DAYS</span></div>
+          <div><strong>00</strong><span>HOURS</span></div>
+          <div><strong>00</strong><span>MINUTES</span></div>
+          <div><strong>00</strong><span>SECONDS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline section">
+      <div class="section-inner reveal">
+        <div class="section-icon" aria-hidden="true">◷</div>
+        <h2 class="script heading">Program Timeline</h2>
+        <div class="ornament">— <span>♥</span> —</div>
+
+        <div class="timeline-list">
+          <article class="timeline-item">
+            <span class="dot"></span>
+            <h3>Guest Arrival</h3>
+            <p class="time">June 30, 2026 · 10:00 AM</p>
+            <p>We warmly welcome you..!</p>
+          </article>
+
+          <article class="timeline-item">
+            <span class="dot"></span>
+            <h3>Wedding Ceremony</h3>
+            <p class="time">June 30, 2026 · 10:30 AM</p>
+            <p>Your gracious presence is requested ❤️</p>
+          </article>
+
+          <article class="timeline-item">
+            <span class="dot"></span>
+            <h3>Reception</h3>
+            <p class="time">July 2, 2026 · 7:30 PM</p>
+            <p>Your gracious presence is requested at the Reception.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="venue section">
+      <div class="section-inner reveal">
+        <div class="section-icon" aria-hidden="true">⌖</div>
+        <h2 class="script heading">Venue</h2>
+        <div class="ornament">— <span>♥</span> —</div>
+        <h3>The Taj Mahal Palace</h3>
+        <p>Apollo Bandar, Colaba, Mumbai, Maharashtra<br>400001</p>
+        <div class="venue-art">⌂　⌂　⌂</div>
+        <a class="red-btn" href="https://www.google.com/maps/search/?api=1&query=The+Taj+Mahal+Palace+Mumbai" target="_blank" rel="noopener">View on Google Maps</a>
+      </div>
+    </section>
+
+    <section class="events section">
+      <div class="section-inner reveal">
+        <div class="section-icon" aria-hidden="true">⌁</div>
+        <h2 class="script heading">Pre-Wedding Events</h2>
+        <div class="ornament">— <span>♥</span> —</div>
+
+        <div class="event-list">
+          <article>
+            <h3>Mehendi</h3>
+            <p>June 27, 2026 · 9:30 PM</p>
+            <span>At Bride's House</span>
+          </article>
+          <article>
+            <h3>Haldi</h3>
+            <p>June 28, 2026 · 8:30 PM</p>
+            <span>At Groom's House</span>
+          </article>
+          <article>
+            <h3>Sangeet</h3>
+            <p>June 29, 2026 · 9:00 PM</p>
+            <span>At The Taj Mahal Palace</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="transport section">
+      <div class="section-inner reveal">
+        <div class="section-icon" aria-hidden="true">🚗</div>
+        <h2 class="script heading">Transportation</h2>
+        <div class="ornament">— <span>♥</span> —</div>
+        <p>Transportation service will be available for our guests.</p>
+        <p>Please contact us for pickup and drop-off details.</p>
+      </div>
+    </section>
+
+    <section class="rsvp section">
+      <div class="section-inner reveal">
+        <div class="section-icon" aria-hidden="true">✉</div>
+        <h2 class="script heading">RSVP</h2>
+        <div class="ornament">— <span>♥</span> —</div>
+
+        <form id="rsvpForm">
+          <label for="rsvpName">Your Name <b>*</b></label>
+          <input id="rsvpName" required name="name" placeholder="Your full name">
+
+          <label for="attendance">Will you be attending? <b>*</b></label>
+          <select id="attendance" required name="attendance">
+            <option value="">Select...</option>
+            <option>Yes, I'll be there ❤️</option>
+            <option>Sorry, I can't attend</option>
+          </select>
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Write your wishes..."></textarea>
+
+          <button class="red-btn" type="submit">Send Message</button>
+          <p id="formNote" class="form-note"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer section">
+      <div class="wave"></div>
+      <h2 class="script">We can't wait to celebrate<br>with you!</h2>
+      <p>Piyush &amp; Dr. Shini</p>
+      <div class="wave"></div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
